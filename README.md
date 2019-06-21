@@ -1,4 +1,5 @@
 # Delicio (Former name: super-eze-recipes)
+This is the project of the Mobile Application Development module. The application was written in TypeScript, HTML5, CSS3 and using Ionic and Angular framework.
 
 ## Script
 
