@@ -1,0 +1,30 @@
+<!--
+  Generated template for the RecipeListingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Recipe Listing</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let recipe of ourRecipeList$ | async" detail-push (click)="goToRecipeDetail(recipe)">
+      <img *ngIf="recipe.imageUrl" src="{{recipe.imageUrl}}" />
+      <ion-card-content>
+        <ion-card-title>
+          {{recipe.name | titlecase}}
+          </ion-card-title>
+          <p *ngIf="recipe.shortDescription">{{recipe.shortDescription}}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <button ion-button (click)="goToHome()">Back to Home</button>
+  
+</ion-content>

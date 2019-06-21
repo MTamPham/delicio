@@ -1,0 +1,27 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title >
+      DELICIO
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="goToFavorite()" class="text-on-bottom"><ion-icon name="heart"></ion-icon>Favorites</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <h1>Welcome to Delicio!</h1>
+  <div text-justify>Here you will find your favourite recipes from all over the world! Happy cooking!</div>
+
+    <ion-card *ngFor="let ingredient of ourIngredientList$ | async" (click)="ingredientSelection.addIngredients(ingredient);goToRecipeListing();">
+      <img *ngIf="ingredient.imageUrl" src="{{ingredient.imageUrl}}" />
+      <div class="card-title">{{ingredient.name | titlecase}}</div>
+      <div class="card-subtitle"></div>
+    </ion-card>
+    
+    <!-- For development stage only-->
+    <!--
+    <button ion-button full round color="danger" (click)="goToDataManagementPage()">Data Management</button>
+    -->
+</ion-content>

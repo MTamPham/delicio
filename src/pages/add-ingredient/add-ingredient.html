@@ -1,0 +1,32 @@
+<!--
+  Generated template for the AddIngredientPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add ingredient</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+ <!-- Name -->
+ <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input [(ngModel)]="ingredientRecord.name" placeholder="Ingredient Name">
+    </ion-input>
+ </ion-item>
+
+ <!-- Image -->
+ <ion-item>
+    <ion-label>Image URL</ion-label>
+    <ion-input [(ngModel)]="ingredientRecord.imageUrl" placeholder="Image URL"></ion-input>
+ </ion-item>
+ 
+ <button ion-button block (click)="addIngredientFromScreen(ingredientRecord)">Add Ingredient</button>
+ {{ingredientRecord | json}}
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "Delicio",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
